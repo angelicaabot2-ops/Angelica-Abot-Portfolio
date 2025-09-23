@@ -1,150 +1,223 @@
-<!doctype html>
+
+      
+      
+  
+    
+    
+
+  
+    
+     
+     
+
+   <!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>My Website — Index</title>
-  <meta name="description" content="A clean, responsive starter page with CSS and JS." />
-
-  <!-- Favicon placeholder -->
-  <link rel="icon" href="assets/favicon.svg" />
-
+  <title>About — Angelica Abot</title>
   <style>
-    /* ---- Reset & base ---- */
     :root{
-      --bg: #0f1724; /* dark navy */
-      --card: #0b1220;
-      --muted: #94a3b8;
-      --accent: #6dd3ff;
-      --glass: rgba(255,255,255,0.04);
-      --radius: 12px;
-      --max-w: 1100px;
-      --gap: 1.25rem;
-      color-scheme: dark;
-      font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+      --bg1:#f6d365;
+      --bg2:#fda085;
+      --card:#ffffff;
+      --muted:#6b7280;
+      --accent:#7c3aed;
+      --glass: rgba(255,255,255,0.6);
+      --radius:18px;
+      font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
     }
     *{box-sizing:border-box}
-    html,body{height:100%}
+    html,body{height:100%;margin:0}
     body{
-      margin:0;
-      background: linear-gradient(180deg, #081024 0%, #061021 60%);
-      color:#e6eef8;
+      background: radial-gradient(1200px 400px at 10% 10%, rgba(124,58,237,0.10), transparent),
+                  linear-gradient(135deg,var(--bg1),var(--bg2));
+      display:flex;align-items:center;justify-content:center;padding:32px;
       -webkit-font-smoothing:antialiased;
-      -moz-osx-font-smoothing:grayscale;
-      line-height:1.45;
-      padding:2rem 1rem;
-      display:flex;
-      justify-content:center;
-      align-items:flex-start;
     }
-
-    /* ---- Page container ---- */
-    .container{
-      width:100%;
-      max-width:var(--max-w);
-      background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
-      border-radius:16px;
-      padding:1.25rem;
-      box-shadow: 0 6px 30px rgba(2,6,23,0.7), inset 0 1px 0 rgba(255,255,255,0.02);
-      backdrop-filter: blur(6px) saturate(120%);
-    }
-
-    header{
-      display:flex;
-      gap:var(--gap);
-      align-items:center;
-      justify-content:space-between;
-      margin-bottom:1rem;
-    }
-    .brand{
-      display:flex;align-items:center;gap:0.75rem;
-    }
-    .logo{
-      width:46px;height:46px;border-radius:10px;display:grid;place-items:center;
-      background:linear-gradient(135deg,var(--accent),#5eb7ff);
-      color:#062433;font-weight:700;font-size:1.05rem;
-      box-shadow: 0 4px 18px rgba(46,150,220,0.12);
-    }
-    .brand h1{font-size:1rem;margin:0}
-    .brand p{margin:0;font-size:0.78rem;color:var(--muted)}
-
-    nav{display:flex;gap:0.5rem;align-items:center}
-    nav a{color:var(--muted);text-decoration:none;padding:0.45rem 0.65rem;border-radius:10px;font-size:0.92rem}
-    nav a.primary{background:var(--glass);color:var(--accent);border:1px solid rgba(255,255,255,0.03)}
-
-    /* ---- Layout ---- */
-    .grid{
-      display:grid;
-      grid-template-columns: 1fr 360px;
-      gap:1rem;
-      align-items:start;
-    }
-
+    .container{width:100%;max-width:960px}
     .card{
-      background: linear-gradient(180deg, rgba(255,255,255,0.016), rgba(255,255,255,0.008));
+      background: linear-gradient(180deg, rgba(255,255,255,0.85), rgba(255,255,255,0.75));
+      backdrop-filter: blur(8px);
       border-radius:var(--radius);
-      padding:1rem;
-      border:1px solid rgba(255,255,255,0.02);
+      padding:26px;box-shadow:0 12px 30px rgba(15,23,42,0.18);
+      display:grid;grid-template-columns: 220px 1fr;gap:20px;align-items:start;
     }
-
-    .hero{
-      display:flex;flex-direction:column;gap:0.75rem;
+    .avatar{
+      height:180px;width:180px;border-radius:18px;display:flex;flex-direction:column;align-items:center;justify-content:center;
+      background: linear-gradient(135deg,var(--accent), #06b6d4);
+      color:white;font-weight:700;font-size:20px;letter-spacing:0.6px;
+      box-shadow: 0 6px 18px rgba(124,58,237,0.18);
+      position:relative;overflow:hidden
     }
-    .hero h2{margin:0;font-size:1.6rem}
-    .hero p{margin:0;color:var(--muted)}
-
-    .cta-row{margin-top:0.8rem;display:flex;gap:0.6rem}
-    .btn{border:0;padding:0.6rem 0.9rem;border-radius:10px;font-weight:600;cursor:pointer}
-    .btn-ghost{background:transparent;color:var(--muted);border:1px solid rgba(255,255,255,0.03)}
-    .btn-primary{background:linear-gradient(90deg,var(--accent),#5eb7ff);color:#012232;box-shadow:0 6px 18px rgba(62,168,218,0.12)}
-
-    /* features */
-    .features{display:grid;grid-template-columns:repeat(2,1fr);gap:0.75rem;margin-top:1rem}
-    .feature{display:flex;gap:0.75rem;align-items:center}
-    .feature .ico{width:44px;height:44px;border-radius:10px;background:rgba(255,255,255,0.03);display:grid;place-items:center;font-weight:700}
-    .feature h3{margin:0;font-size:0.95rem}
-    .feature p{margin:0;color:var(--muted);font-size:0.86rem}
-
-    /* sidebar */
-    .sidebar{
-      display:flex;flex-direction:column;gap:0.75rem;
-      position:sticky;top:1.5rem;
-    }
-    .profile{display:flex;gap:0.75rem;align-items:center}
-    .avatar{width:64px;height:64px;border-radius:12px;background:linear-gradient(180deg,#204358,#0b2a36);display:grid;place-items:center;font-weight:700;font-size:1.1rem}
-    .meta p{margin:0;color:var(--muted);font-size:0.86rem}
-
-    /* gallery */
-    .gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:0.5rem;margin-top:0.8rem}
-    .gallery img{width:100%;height:80px;object-fit:cover;border-radius:8px}
-
-    /* footer */
-    footer{margin-top:1rem;text-align:center;color:var(--muted);font-size:0.9rem;padding:0.6rem}
-
-    /* responsive */
-    @media (max-width:980px){
-      .grid{grid-template-columns:1fr}
-      .sidebar{position:static}
+    .avatar .initials{font-size:34px}
+    .avatar small{opacity:0.9}
+    .badge{position:absolute;left:8px;top:8px;background:rgba(255,255,255,0.12);padding:6px 10px;border-radius:999px;font-size:12px}
+    h1{margin:0;font-size:22px}
+    p.lead{margin:6px 0 12px;color:var(--muted)}
+    .info{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+    .info .row{background:var(--card);padding:12px;border-radius:12px;box-shadow:inset 0 -1px 0 rgba(15,23,42,0.03)}
+    .row small{display:block;color:var(--muted);font-size:12px}
+    .row strong{display:block;margin-top:6px;font-size:15px}
+    .actions{display:flex;gap:12px;margin-top:14px}
+    button{background:var(--accent);color:white;padding:10px 14px;border-radius:12px;border:0;cursor:pointer;font-weight:600}
+    button.ghost{background:transparent;color:var(--accent);box-shadow:inset 0 0 0 1px rgba(124,58,237,0.12)}
+    .toggle{margin-left:auto}
+    .bio{grid-column:1/-1;margin-top:6px;background:linear-gradient(180deg, rgba(255,255,255,0.6), rgba(255,255,255,0.5));padding:14px;border-radius:12px}
+    .controls{display:flex;gap:8px;flex-wrap:wrap}
+    .small{font-size:13px;color:var(--muted)}
+    .editable{border-radius:10px;padding:8px;border:1px dashed transparent}
+    .editable[contenteditable]:focus{outline:none;border-color:rgba(124,58,237,0.18);background:rgba(124,58,237,0.03)}
+    footer{margin-top:16px;text-align:center;color:var(--muted);font-size:13px}
+    @media (max-width:760px){
+      .card{grid-template-columns:1fr;}
+      .avatar{width:140px;height:140px;margin:0 auto}
+      .info{grid-template-columns:1fr}
     }
   </style>
 </head>
 <body>
-  <main class="container">
-    <header>
-      <div class="brand">
-        <div class="logo">AG</div>
-        <div>
-          <h1>Angelica's Site</h1>
-          <p>Clean starter template — responsive & accessible</p>
+  <div class="container">
+    <div class="card" role="region" aria-label="About Angelica Abot">
+      <div>
+        <div class="avatar" id="avatar">
+          <div class="badge">Mother • BSIT - 2C</div>
+          <div class="initials">AA</div>
+          <small id="subtitle">Mother of Princess Abegail</small>
+        </div>
+        <div style="margin-top:12px;display:flex;gap:8px;justify-content:center">
+          <button class="ghost" id="editBtn">Edit</button>
+          <button id="downloadBtn">Download JSON</button>
         </div>
       </div>
 
-      <nav>
-        <a href="#features">Features</a>
-        <a href="#gallery">Gallery</a>
-        <a href="#contact" class="primary">Contact</a>
-      </nav>
-    </header>
+      <div>
+        <h1 id="name">Angelica Abot</h1>
+        <p class="lead">About me — quick snapshot.</p>
 
-    <section class="grid">
+        <div class="info" id="infoGrid">
+          <div class="row">
+            <small>Status</small>
+            <strong id="status">With Spouse (Live in partner)</strong>
+          </div>
+          <div class="row">
+            <small>Residence</small>
+            <strong id="residence">Brgy. Alacaak So. Pakilan</strong>
+          </div>
+          <div class="row">
+            <small>Child</small>
+            <strong id="child">Princess Abegail Bascoguin</strong>
+          </div>
+          <div class="row">
+            <small>Course &amp; Section</small>
+            <strong id="course">BSIT - 2C</strong>
+          </div>
+        </div>
+
+        <div class="bio">
+          <div style="display:flex;align-items:center;gap:12px;">
+            <div style="flex:1">
+              <div class="small">Short personal note (editable):</div>
+              <div id="note" class="editable" contenteditable="false">Hi — I'm Angelica, a proud mother and BSIT student balancing family and studies. I love learning new web technologies and creating nice, useful things.</div>
+            </div>
+            <div class="controls">
+              <button id="toggleView">Compact</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="actions">
+          <div class="small">Tip: click <em>Edit</em> to change any text directly, then Save.</div>
+          <div class="toggle"></div>
+        </div>
+
+      </div>
+    </div>
+
+    <footer>
+      Designed with ♥ — exportable profile card
+    </footer>
+  </div>
+
+  <script>
+    // Preloaded data (from user)
+    const profile = {
+      name: 'Angelica Abot',
+      child: 'Princess Abegail Bascoguin',
+      status: 'With Spouse (Live in partner)',
+      residence: 'Brgy. Alacaak So. Pakilan',
+      course: 'BSIT - 2C',
+      note: "Hi — I'm Angelica, a proud mother and BSIT student balancing family and studies. I love learning new web technologies and creating nice, useful things."
+    };
+
+    // Populate fields (already hard-coded but keep sync functions)
+    function populate(){
+      document.getElementById('name').innerText = profile.name;
+      document.getElementById('child').innerText = profile.child;
+      document.getElementById('status').innerText = profile.status;
+      document.getElementById('residence').innerText = profile.residence;
+      document.getElementById('course').innerText = profile.course;
+      document.getElementById('note').innerText = profile.note;
+      // initials
+      const initials = profile.name.split(' ').map(s=>s[0]).slice(0,2).join('').toUpperCase();
+      document.querySelector('.initials').innerText = initials;
+      document.getElementById('subtitle').innerText = 'Mother of ' + profile.child.split(' ')[0];
+    }
+    populate();
+
+    // Edit / Save
+    const editBtn = document.getElementById('editBtn');
+    let editing=false;
+    editBtn.addEventListener('click',()=>{
+      editing = !editing;
+      document.querySelectorAll('.editable').forEach(el=>el.contentEditable = editing);
+      editBtn.innerText = editing ? 'Save' : 'Edit';
+      if(!editing){
+        // save
+        profile.note = document.getElementById('note').innerText.trim();
+      }
+    });
+
+    // Download JSON
+    document.getElementById('downloadBtn').addEventListener('click',()=>{
+      const dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(profile, null, 2));
+      const a = document.createElement('a');
+      a.href = dataStr; a.download = profile.name.replace(/\s+/g,'_') + '_profile.json';
+      a.click();
+    });
+
+    // Toggle compact / detailed
+    const toggle = document.getElementById('toggleView');
+    let compact=false;
+    toggle.addEventListener('click',()=>{
+      compact = !compact;
+      document.querySelector('.info').style.display = compact ? 'none' : 'grid';
+      document.getElementById('subtitle').style.display = compact ? 'none' : 'block';
+      toggle.innerText = compact ? 'Show details' : 'Compact';
+    });
+
+    // Allow inline editing by clicking on info rows
+    document.querySelectorAll('.row').forEach(row=>{
+      row.addEventListener('click', ()=>{
+        const strong = row.querySelector('strong');
+        const key = strong.id; // status,residence,child,course
+        const current = strong.innerText;
+        const val = prompt('Edit value', current);
+        if(val!==null){
+          strong.innerText = val;
+          // update profile object if key matches
+          if(key && profile[key]!==undefined) profile[key]=val;
+          // special case when editing child updates subtitle
+          if(key==='child') document.getElementById('subtitle').innerText = 'Mother of ' + val.split(' ')[0];
+        }
+      });
+    });
+
+    // Accessibility: keyboard shortcut to download (d)
+    document.addEventListener('keydown', (e)=>{ if(e.key.toLowerCase()==='d' && (e.ctrlKey||e.metaKey)){ e.preventDefault(); document.getElementById('downloadBtn').click(); } });
+  </script>
+</body>
+</html>
+
+
 
