@@ -17,7 +17,7 @@ Hi, I’m *Angelica Abot*. I am passionate about coding, design, and building cr
 ---
 
 ## 🌐 Live Site
-Check out my portfolio here: [Live Site](https://angelicaabot2-ops.github.io/Angelica-Abot-Portfolio/)
+Check out my portfolio here: (https://angelicaabot2-ops.github.io/Angelica-Abot-Portfolio/)
 
 ---
 
@@ -31,7 +31,7 @@ Check out my portfolio here: [Live Site](https://angelicaabot2-ops.github.io/Ang
 ---
 
 ## 📫 Contact Me
-- Email: angelicaabot2@gmail.com.com  
+- Email: angelicaabot2@gmail.com. 
   
 - GitHub: [github.com/angelicaabot](https://github.com/angelicaabot2-ops/Angelica-Abot-Portfolio.git )
 
