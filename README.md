@@ -1,10 +1,37 @@
- Section: BSIT-2c
- Live Site: (https://angelicaabot2-ops.github.io/Angelica-Abot-Portfolio/)
- Tech used: Desktop
-To contact me : Message me on my FB Account (Angelica Abot)
-Reflection:
-Developing my portfolio website presented several challenges that required patience, problem-solving, and continuous learning. One of the primary difficulties I encountered was structuring the project effectively. Initially, I struggled to integrate the HTML, CSS, and and uploaded files  in a way that maintained both functionality and organization. Ensuring responsiveness across different devices also proved to be demanding, as I needed to adjust layouts and styling so that the website displayed properly on both desktop and mobile screens. In addition, implementing interactive features through Html was challenging because certain functions did not behave as expected, leading to errors that affected the performance of the site.
+ # Angelica Abot | Portfolio
 
-To address these obstacles, I adopted a systematic approach. I divided larger tasks into smaller, manageable steps and tested each part frequently to identify issues early. Consulting online resources such as tutorials and official documentation allowed me to better understand specific coding concepts and practices. I also utilized browser developer tools to trace errors and refine the functionality of my scripts. These strategies not only resolved the technical difficulties but also enhanced my ability to analyze and improve my work independently.
+Welcome to my personal portfolio! This is where I showcase my projects, skills, and journey as a web developer/designer.
 
-Looking ahead, there are several ways I could further enhance my portfolio. I plan to integrate advanced features such as a dark mode toggle, smoother animations, and a functional contact form connected to a backend service. I would also refine the design to improve both aesthetics and accessibility. These improvements would ensure a more professional and user-friendly portfolio that effectively represents my skills.
+---
+
+## 👩‍💻 About Me
+Hi, I’m *Angelica Abot*. I am passionate about coding, design, and building creative digital projects. I am constantly learning and exploring new technologies to improve my skills.
+
+---
+
+## 🗂 Portfolio Sections
+- About Me
+- My Projects
+- Contact
+
+---
+
+## 🌐 Live Site
+Check out my portfolio here: [Live Site](https://angelicaabot2-ops.github.io/Angelica-Abot-Portfolio/)
+
+---
+
+## 🛠 Technologies Used
+- HTML
+- CSS
+- JavaScript
+- Git & GitHub
+- [Any other tech you used]
+
+---
+
+## 📫 Contact Me
+- Email: angelicaabot2@gmail.com.com  
+  
+- GitHub: [github.com/angelicaabot](https://github.com/angelicaabot2-ops/Angelica-Abot-Portfolio.git )
+
